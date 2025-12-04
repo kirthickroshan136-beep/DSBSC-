@@ -1,6 +1,3 @@
-# DSBSC
-
-
 EX NO: 2	DSB-SC-AM MODULATOR AND DEMODULATOR
 
 AIM:
@@ -49,13 +46,49 @@ Model Waveform
 
 Program
 
+Am=5.3;
+
+Ac=10.6;
+
+fm=434;
+
+fc=4340;
+
+fs=43400;
+
+t=0:1/fs:2/fm;
+
+m=Am*cos(2*3.14*fm*t);
+
+subplot(3,1,1);
+
+plot(t,m);
+
+c=Ac*cos(2*3.14*fc*t);
+
+subplot(3,1,2);
+
+plot(t,c);
+
+s1=(Ac+m).*cos(2*3.14*fc*t);
+
+s2=(Ac-m).*cos(2*3.14*fc*t);
+
+s=s1-s2;
+
+subplot(3,1,3);
+
+plot(t,s);
+
+
 Output Graph
+<img width="1518" height="960" alt="Screenshot 2025-08-19 232342" src="https://github.com/user-attachments/assets/c4a268e5-f45b-4955-9e6b-2324e6f2bf60" />
 
 
 Tablular Column
 
+<img width="817" height="1280" alt="image" src="https://github.com/user-attachments/assets/7e2e92c5-ff36-48a6-acc6-28da5f525e1d" />
 
 Result
 
 Thus the DSB-SC-AM Modulation and Demodulation is generated.
-
